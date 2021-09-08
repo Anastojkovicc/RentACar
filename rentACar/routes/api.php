@@ -2,6 +2,7 @@
 
 use App\Models\Auto;
 use App\Http\Controllers\AutoController;
+use App\Http\Controllers\RentiranjeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,6 @@ Route::get('/autos', [AutoController::class, 'vratiSveAute']);
 Route::post('/autos', [AutoController::class, 'dodajAuto']);
 Route::put('/autos/{auto}', [AutoController::class, 'izmeniAuto']);
 Route::delete('/autos/{auto}', [AutoController::class, 'izbrisiAuto']);
+
+Route::get('/rentiranjes', [RentiranjeController::class, 'vratiSvaRentiranja']);
+Route::post('/rentiranjes', [RentiranjeController::class, 'dodajRentiranje']);
