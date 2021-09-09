@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Database\Seeders\AutoSeeder;
+use Database\Seeders\RentiranjeSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,5 +17,10 @@ class DatabaseSeeder extends Seeder
     {
        $s= new AutoSeeder();
        $s -> run();
+
+       $r = new RentiranjeSeeder();
+       $r -> run();
+
+  
     }
 }
