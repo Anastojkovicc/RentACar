@@ -15,12 +15,14 @@ class AutoController extends Controller
         request()->validate([
             'Marka'=>'required',
             'Model'=>'required',
-            'Godiste'=>'required'
+            'Godiste'=>'required',
+            'CenaPoDanu' => 'required'
         ]);
         return Auto::create([
             'Marka'=>request('Marka'),
             'Model'=>request('Model'),
-            'Godiste'=>request('Godiste')
+            'Godiste'=>request('Godiste'),
+            'CenaPoDanu'=>request('CenaPoDanu')
         ]);
 
     }
@@ -30,12 +32,14 @@ class AutoController extends Controller
         request()->validate([
             'Marka'=>'required',
             'Model'=>'required',
-            'Godiste'=>'required'
+            'Godiste'=>'required',
+            'CenaPoDanu' => 'required'
         ]);
         $success= $auto-> update([
             'Marka'=>request('Marka'),
             'Model'=>request('Model'),
-            'Godiste'=>request('Godiste')
+            'Godiste'=>request('Godiste'),
+            'CenaPoDanu'=>request('CenaPoDanu')
         ]);
 
         return [
